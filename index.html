@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        nav {
+            box-sizing: border-box;
+            display: flex;
+            height: 60px;
+            justify-content: space-between;
+            background:rgb(39, 39, 39);
+        }
+
+        .list-item ul li a {
+            text-transform: uppercase;
+            padding: 10px;
+            margin: 10px;
+            text-decoration: none;
+            list-style: none;
+            color: white;
+        }
+
+        .list-item ul li {
+            display: inline;
+
+        }
+
+        .list-item {
+            margin: 20px;
+        }
+
+        .search {
+            margin: 20px;
+        }
+
+        .lists {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+
+
+
+        }
+
+        h2 {
+            text-transform: uppercase;
+            margin-top: 20px;
+
+        }
+
+        .inp {
+            margin: 10px;
+            padding: 5px;
+
+        }
+
+        .input {
+
+            position: relative;
+            left: -16px;
+            margin: 20px;
+        }
+
+        .btn {
+            padding: 10px 5px;
+            position: relative;
+            left: 5px;
+            border-radius: 5px;
+            border: rgb(28, 28, 248);
+            background-color: rgb(28, 28, 248);
+            color: white;
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .h2 {
+            margin: 20px 0;
+        }
+
+        tr {
+            margin: 5px;
+
+        }
+
+        .padding {
+            padding: 10px;
+        }
+
+        .button {
+            padding: 5px;
+        }
+        input{
+            border: 2px solid rgb(197, 197, 197);
+            outline: none;
+
+        }
+        span{
+            position: relative;
+            left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="search">
+                <input type="text" placeholder="search">
+            </div>
+            <div class="list-item">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="#">blog</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="lists">
+            <h2>fill the blanck</h2>
+            <div class="input">
+                <input type="text" placeholder="name" id="name" class="inp"><br>
+                <input type="password" placeholder="passsword" id="password" class="inp">
+            </div>
+            <button type="submit" class="btn button" id="add">SUMBIT</button>
+        </div>
+        <hr>
+        <div class="you-item">
+            <h2 class="h2">YOUR ITEM</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="padding" scope="col">SNo</th>
+                        <th class="padding" scope="col">Name</th>
+                        <th class="padding" scope="col">passsword</th>
+                        
+                    </tr>
+                </thead>
+             
+                <tbody class="tbody" id="tbody">
+
+                    <tr>
+                        <td class="padding">1</td>
+                        <td class="padding">-----</td>
+                        <td class="padding">-----</td>
+                        
+                    </tr>
+                    
+                </tbody>
+                
+            </table>
+            <button type="submit" class="btn button " onclick="clicked()">Delete</button><span>please refreash the page</span>
+        </div>
+    </div>
+    <script  src="index.js">
+        // add = document.getElementById('add')
+
+        // add.addEventListener('click', function(){
+        //     Name = document.getElementById('name').value
+        //     password = document.getElementById('password').value
+        //     if (localStorage.getItem('itemjson')== null){
+        //         itemjsonarry = []
+        //         itemjsonarry.push([Name,password]);
+        //         localStorage.setItem('itemjson',JSON.stringify(itemjsonarry))
+
+        //     }
+        //     else{
+        //         itemjsonarrystr = localStorage.getItem('itemjson')
+        //         itemjsonarry = JSON.parse(itemjsonarrystr)
+        //         itemjsonarry.push([Name,password]);
+        //         localStorage.setItem('itemjson',JSON.stringify(itemjsonarry))
+        //     }
+
+        //     tbody = document.getElementById('tbody')
+        //     str = ""
+        //     itemjsonarry.forEach((element,idex) => {
+        //         str += `     
+        //           <tr>
+        //                 <td class="padding">${index + 1}</td>
+        //                 <td class="padding">${element[0]}</td>
+        //                 <td class="padding">${element[1]}</td>
+        //                 <td><button type="submit" class="btn button">Delete</button></td>
+        //             </tr>
+        //         `
+        //     });
+            
+
+        //     tbody.innerHTML = str
+            
+
+        // })
+
+   
+    </script>
+</body>
+
+</html>
